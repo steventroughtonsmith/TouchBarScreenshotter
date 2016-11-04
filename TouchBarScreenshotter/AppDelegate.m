@@ -111,6 +111,7 @@ BOOL CGImageWriteToFile(CGImageRef image, NSString *path) {
 	NSString *outputPath = [[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop"] stringByAppendingPathComponent:[NSString stringWithFormat:@"%@ Touch Bar %@.png", appName, [formatter stringFromDate:[NSDate date]]]];
 	
 	CGImageWriteToFile(imgRef,outputPath);
+	CGImageRelease(imgRef);
 }
 
 @end
